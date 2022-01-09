@@ -1,15 +1,7 @@
-var template_builder = Class.extend({
+var Scan = Class.extend({
   init: function (opt) {
     $.extend(this, opt);
-    this.uniqueId();
-    this.make_main_template_structure();
-    this.define_tabs();
-    this.build_tabs_togglers_ui();
-    this.build_tabs_content_ui();
-    this.build_or_get();
-    this.add_drag_controls();
-    this.make_dragabble_sections();
-    this.make();
+    console.log("THIS");
   },
 
   make: function () {
