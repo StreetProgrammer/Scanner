@@ -12,21 +12,7 @@
 </head>
 
 <body>
-  <div class="wrapper" style="margin: 1vw;">
-    <div class="container-fluid my-2">
-      <div class="row">
-        <div class="col-md-12">
-          <input type="button" value="Scan" class=" btn btn-primary" onclick="AcquireImage()" />
-        </div>
-        <div class="col-md-2">
-          <div id="dwtcontrolContainer"></div>
-        </div>
-        <div class="col-md-8"></div>
-        <div class="col-md-2"></div>
-      </div>
-
-    </div>
-  </div>
+  <div id="scanner-container" class="wrapper" style="margin: 1vw;"></div>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="./js/Class.js"></script>
   <script src="./js/Classes/Scan.js"></script>
@@ -34,36 +20,36 @@
 
 
   <script type="text/javascript">
-    var DWObject;
+    // var DWObject;
 
-    function Dynamsoft_OnReady() {
-      DWObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
-      console.log(DWObject);
+    // function Dynamsoft_OnReady() {
+    //   DWObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
+    //   console.log(DWObject);
 
-      // try
-      if (DWObject) {
-        DWObject.XferCount = 2;
-        DWObject.IfShowUI = true;
-      }
-      console.log("z 1 => ", DWObject.XferCount);
-      // 
-    }
+    //   // try
+    //   if (DWObject) {
+    //     DWObject.XferCount = 2;
+    //     DWObject.IfShowUI = true;
+    //   }
+    //   console.log("z 1 => ", DWObject.XferCount);
+    //   // 
+    // }
 
-    function AcquireImage() {
-      console.log("z 2 => ", DWObject.XferCount);
+    // function AcquireImage() {
+    //   console.log("z 2 => ", DWObject);
 
-      if (DWObject) {
-        DWObject.SelectSource(
-          () => {
-            DWObject.OpenSource();
-            DWObject.AcquireImage();
-          },
-          () => {
-            console.log("selection faild..");
-          }
-        );
-      }
-    }
+    //   if (DWObject) {
+    //     DWObject.SelectSource(
+    //       () => {
+    //         DWObject.OpenSource();
+    //         DWObject.AcquireImage();
+    //       },
+    //       () => {
+    //         console.log("selection faild..");
+    //       }
+    //     );
+    //   }
+    // }
   </script>
 </body>
 
