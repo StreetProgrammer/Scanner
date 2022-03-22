@@ -1,19 +1,20 @@
-﻿//
+//
 // Dynamsoft JavaScript Library for Basic Initiation of Dynamic Web TWAIN
 // More info on DWT: http://www.dynamsoft.com/Products/WebTWAIN_Overview.aspx
 //
-// Copyright 2021, Dynamsoft Corporation 
+// Copyright 2022, Dynamsoft Corporation
 // Author: Dynamsoft Team
-// Version: 17.1.1
+// Version: 17.2.1
 //
 /// <reference path="dynamsoft.webtwain.initiate.js" />
 var Dynamsoft = Dynamsoft || { DWT: {} };
 
 ///
 Dynamsoft.DWT.AutoLoad = true;
-
 ///
-Dynamsoft.DWT.Containers = [{ContainerId:'dwtcontrolContainer', Width:270, Height:350}];
+Dynamsoft.DWT.Containers = [
+  { ContainerId: 'dwtcontrolContainer', Width: 270, Height: 350 },
+];
 
 /////////////////////////////////////////////////////////////////////////////////////
 //  WARNING:  The productKey in this file is protected by copyright law            //
@@ -23,19 +24,20 @@ Dynamsoft.DWT.Containers = [{ContainerId:'dwtcontrolContainer', Width:270, Heigh
 //  extent possible under the law.  Further, you may not reverse engineer,         //
 //  decompile, disassemble, or modify the productKey .                             //
 /////////////////////////////////////////////////////////////////////////////////////
-/// If you need to use multiple keys on the same server, you can combine keys and write like this 
+/// If you need to use multiple keys on the same server, you can combine keys and write like this
 /// Dynamsoft.DWT.ProductKey = 'key1;key2;key3';
-Dynamsoft.DWT.ProductKey = 't00986QAAAG+kopESA0RWZzbcpbb3+VgZP/B36/6icUax/YhH4pnM4WxsKB9loA75WC99jkBPGPqF5uwk+q9zwZ2v6ee7o6PrX7xoXJorZhRjczY1jA3jKUxWulGqFqvyAlVXLpY=';
+/// To get a free trial, please visit https://www.dynamsoft.com/customer/license/trialLicense?product=dwt&utm_source=installer.
+Dynamsoft.DWT.ProductKey =
+  't0154KQMAAIHDYNfUcZ5vdo1wWrYusTQw1xrUdkFl3UjPXBro8AzxsJdg8OAGYl18ARtaWqNIhq4Myka6x4memR6tcT3oRnwkNlRjw3AMVhP1W0mn1Bk+zNOMNIOLOn9jZ12ZF44fgzqd4QkjsbH+jI2b+ddD9jP3hieMxMbN3Bm/zzXrPe4C2lpmGhmeMBKblvlspGToG0lvin+eVg==';
 
 ///
-// Dynamsoft.DWT.ResourcesPath = 'Resources';
+//Dynamsoft.DWT.ResourcesPath = 'Resources';
 
 ///
 Dynamsoft.DWT.IfAddMD5InUploadHeader = false;
 
 ///
 Dynamsoft.DWT.IfConfineMaskWithinTheViewer = false;
-
 
 ///
 /*Dynamsoft.DWT.CustomizableDisplayInfo = {
@@ -74,15 +76,15 @@ Dynamsoft.DWT.IfConfineMaskWithinTheViewer = false;
     customProgressText: {
 
         // html5 event
-        upload: 'uploading...',
+        upload: 'Uploading...',
         download: 'Downloading...',
         load: 'Loading...',
-        decode: 'Decoding...',
-        decodeTIFF: 'Decoding tiff...',
-        decodePDF: 'Decoding pdf...',
-        encode: 'Encoding...',
-        encodeTIFF: 'Encoding tiff...',
-        encodePDF: 'Encoding pdf...',
+        decode: 'Processing...',
+        decodeTIFF: 'Processing tiff...',
+        decodePDF: 'Processing pdf...',
+        encode: 'Processing...',
+        encodeTIFF: 'Processing tiff...',
+        encodePDF: 'Processing pdf...',
 
         // image control
         canvasLoading: 'Loading ...'
@@ -121,8 +123,8 @@ Dynamsoft.DWT.IfConfineMaskWithinTheViewer = false;
             'removeall': 'Remove All Images',
             'removeselected': 'Remove All Selected Images'
         }
-	},
-	
+    },
+
     dialogText: {
         dlgRotateAnyAngle: ['Angle :', 'Interpolation:', 'Keep size', '  OK  ', 'Cancel'],
         dlgChangeImageSize: ['New Height :', 'New Width :', 'Interpolation method:', '  OK  ', 'Cancel'],
@@ -131,9 +133,7 @@ Dynamsoft.DWT.IfConfineMaskWithinTheViewer = false;
     }
 };*/
 
-
 /// All callbacks are defined in the dynamsoft.webtwain.install.js file, you can customize them.
 // Dynamsoft.DWT.RegisterEvent('OnWebTwainReady', function(){
 // 		// webtwain has been inited
 // });
-

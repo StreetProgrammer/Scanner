@@ -1,24 +1,11 @@
-// var DWObject;
-// function Dynamsoft_OnReady() {
-//   // Dynamsoft.DWT.CreateDWTObject("dwtcontrolContainerr");
-//   // DWObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainerr");
-//   // // console.log(DWObject);
-//   // // try
-//   // if (DWObject) {
-//   //   var scan = new Scan({ DWObject });
-//   //   // DWObject = null;
-//   //   // DWObject.XferCount = 2;
-//   //   // DWObject.IfShowUI = true;
-//   // }
-//   // // console.log("z 1 => ", DWObject.XferCount);
-//   // //
-// }
-
 $(document).ready(function () {
-  var scan = new Scan({ wrapper: "scanner-container" });
-  // Dynamsoft.DWT.CreateDWTObject("dwtcontrolContainerr");
-  // console.log(Dynamsoft.DWT);
-  // DWObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainerr");
-  // Dynamsoft.DWT.Load();
-  // scan.get_obj(DWObject);
+  var scan = new Scan({
+    wrapper: 'scanner-container',
+    scanner_wrapper: 'scanner_wrapper',
+    options: {
+      output: 'blob', // 'blob' || 'base64' default=>'blob'
+      name: 'image', // default=>'image' + '_' + $index   => EX: 'image_0.png' --IGNORED IF output CHOOSE TO BE 'base64'
+      type: 'jpeg', // 'png' || 'jpg' || 'jpeg'  --IGNORED IF output CHOOSE TO BE 'base64'
+    },
+  });
 });
