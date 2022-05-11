@@ -10,7 +10,7 @@
 var Dynamsoft = Dynamsoft || { DWT: {} };
 
 ///
-Dynamsoft.DWT.AutoLoad = true;
+Dynamsoft.DWT.AutoLoad = false;
 ///
 Dynamsoft.DWT.Containers = [
   { ContainerId: 'dwtcontrolContainer', Width: 270, Height: 350 },
@@ -27,9 +27,9 @@ Dynamsoft.DWT.Containers = [
 /// If you need to use multiple keys on the same server, you can combine keys and write like this
 /// Dynamsoft.DWT.ProductKey = 'key1;key2;key3';
 /// To get a free trial, please visit https://www.dynamsoft.com/customer/license/trialLicense?product=dwt&utm_source=installer.
-Dynamsoft.DWT.ProductKey =
-  't0154KQMAAIHDYNfUcZ5vdo1wWrYusTQw1xrUdkFl3UjPXBro8AzxsJdg8OAGYl18ARtaWqNIhq4Myka6x4memR6tcT3oRnwkNlRjw3AMVhP1W0mn1Bk+zNOMNIOLOn9jZ12ZF44fgzqd4QkjsbH+jI2b+ddD9jP3hieMxMbN3Bm/zzXrPe4C2lpmGhmeMBKblvlspGToG0lvin+eVg==';
-
+// Dynamsoft.DWT.ProductKey =
+//   'DLS2eyJoYW5kc2hha2VDb2RlIjoiMTAwOTE1NjY2LTEwMDkyMTc0OSIsIm9yZ2FuaXphdGlvbklEIjoiMTAwOTE1NjY2In0=';
+Dynamsoft.DWT.organizationID = '100915666';
 ///
 //Dynamsoft.DWT.ResourcesPath = 'Resources';
 
@@ -134,6 +134,6 @@ Dynamsoft.DWT.IfConfineMaskWithinTheViewer = false;
 };*/
 
 /// All callbacks are defined in the dynamsoft.webtwain.install.js file, you can customize them.
-// Dynamsoft.DWT.RegisterEvent('OnWebTwainReady', function(){
-// 		// webtwain has been inited
-// });
+Dynamsoft.DWT.RegisterEvent('OnWebTwainReady', function () {
+  console.warn('OnWebTwainReady');
+});

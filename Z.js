@@ -35260,7 +35260,7 @@ Dynamsoft.Ready(function (f, b) {
         }
       } else {
         if (m) {
-          q.push('You are seeing this message because your trial key ');
+          q.push('YYYou are seeing this message because your trial key ');
           q.push(o);
           q.push('. Two quick steps to extend your trial: <br /><div><ul>');
           q.push(
@@ -35288,12 +35288,7 @@ Dynamsoft.Ready(function (f, b) {
         }
       }
       q.push('</div>');
-      Dynamsoft.DWT.ShowMessage(q.join(''), {
-        width: l,
-        height: 0,
-        headerStyle: 1,
-        closeButton: false,
-      });
+      // Dynamsoft.DWT.ShowMessage(q.join(""), { width: l, height: 0, headerStyle: 1, closeButton: false });
       if (f.env.bMobile) {
         var i = f.one('.ds-dwt-ui-dlg-wrap');
         if (i && i.length > 0) {
